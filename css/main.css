@@ -1,0 +1,560 @@
+@import url(https://fonts.googleapis.com/css?family=Halant:400,500,300,600,700|Josefin+Sans:400,100italic,100,300,300italic,400italic,600,600italic,700|Playfair+Display:400,400italic,700,700italic,900,900italic);
+/*start fixed variable's*/
+#carouselExampleFade .carousel-inner .dark-overlay:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(130, 163, 68, 0.7);
+}
+
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption h2 {
+  font-size: 80px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  color: #ffffff;
+  text-transform: capitalize;
+  padding-bottom: 13px;
+  font-family: "Playfair Display", serif;
+}
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption h2::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 100;
+  bottom: 25px;
+  left: 0px;
+  border-radius: 25px 8px;
+  transform: rotate(-4deg);
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+}
+@media (max-width: 991px) {
+  #carouselExampleFade .carousel-inner .carousel-item .carousel-caption h2::after {
+    height: 20px;
+    bottom: 20px;
+  }
+}
+
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption button:nth-of-type(1) {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  position: relative;
+}
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption button:nth-of-type(1) a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: bold;
+}
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption button:nth-of-type(1)::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 0;
+  background-color: #ffffff;
+  left: 0;
+  top: 0;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption button:hover:nth-of-type(1)::before {
+  width: 100%;
+}
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption button:hover:nth-of-type(1) a {
+  color: #464343;
+  position: relative;
+}
+
+/*this style for ffbar*/
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #31313c;
+  border: 1px solid #82a344;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #82a344;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #31313c;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+  color: #fff !important;
+}
+
+.nav-link {
+  color: #fff !important;
+}
+
+nav {
+  background-color: rgba(238, 234, 234, 0.3);
+  transition: 0.4s ease-in-out;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -ms-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  position: absolute;
+}
+
+.navbar-brand {
+  letter-spacing: 3px;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.navbar-scroll .navbar-brand,
+.navbar-scroll .nav-link,
+.navbar-scroll .fa-bars {
+  color: #fff;
+}
+
+.navbar-scrolled .navbar-brand,
+.navbar-scrolled .nav-link,
+.navbar-scrolled .fa-bars {
+  color: #4f4f4f;
+}
+
+@media (max-width: 991px) {
+  .scrollNow {
+    background-color: #fff;
+  }
+
+  .navbar-scroll .navbar-brand,
+.navbar-scroll .nav-link,
+.navbar-scroll .fa-bars {
+    color: #4f4f4f !important;
+  }
+}
+.mask-custom {
+  backdrop-filter: blur(5px);
+  background-color: rgba(244, 238, 238, 0.15);
+}
+
+.navbar-brand {
+  font-size: 1.75rem;
+  letter-spacing: 3px;
+}
+
+.scrollNow {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  position: fixed;
+  color: #000;
+}
+
+.scrollNow.nav-link {
+  color: red;
+}
+
+#carouselExampleFade {
+  height: 100%;
+  overflow: hidden;
+}
+#carouselExampleFade .carousel-inner .carousel-item img.height {
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  height: 90vh;
+}
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption {
+  z-index: 1;
+  margin: 0 auto;
+  top: 20%;
+  max-width: 500px;
+}
+@media (max-width: 991px) {
+  #carouselExampleFade .carousel-inner .carousel-item .carousel-caption h2 {
+    font-size: 32px !important;
+    position: relative;
+  }
+  #carouselExampleFade .carousel-inner .carousel-item .carousel-caption p {
+    font-size: 16px !important;
+  }
+  #carouselExampleFade .carousel-inner .carousel-item .carousel-caption button {
+    border: 1px;
+  }
+}
+@media (max-width: 991px) and (max-width: 380px) {
+  #carouselExampleFade .carousel-inner .carousel-item .carousel-caption button a {
+    font-size: 11px;
+  }
+}
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption h2, #carouselExampleFade .carousel-inner .carousel-item .carousel-caption p {
+  text-transform: capitalize;
+}
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption p {
+  font-family: "Halant", serif;
+}
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption p.subscribe span {
+  color: #31313c;
+  background-color: #ffffff;
+  padding: 4px 7px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  text-decoration: line-through;
+}
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption .sub_info {
+  text-align: center;
+}
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption .sub_info input {
+  border: none;
+  padding: 8px 15px;
+  margin: 0 auto;
+}
+@media (max-width: 380px) {
+  #carouselExampleFade .carousel-inner .carousel-item .carousel-caption .sub_info input {
+    font-size: 11px;
+  }
+}
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption .sub_info input[type=email] {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  outline: none;
+}
+@media (max-width: 424px) {
+  #carouselExampleFade .carousel-inner .carousel-item .carousel-caption .sub_info input[type=email] {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+  }
+}
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption .sub_info input[type=submit] {
+  background-color: rgba(130, 163, 68, 0.8);
+  font-weight: bold;
+  color: #ffffff;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin-left: -5px;
+  text-transform: capitalize;
+  display: inline-block;
+}
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption .sub_info input[type=submit]:hover {
+  background-color: #82a344;
+}
+@media (max-width: 424px) {
+  #carouselExampleFade .carousel-inner .carousel-item .carousel-caption .sub_info input[type=submit] {
+    margin: 5px auto;
+    text-align: center;
+    display: block;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+  }
+}
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption .gallery {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption .gallery .row_ {
+  display: flex;
+  margin: 0;
+}
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption .gallery .row_ img.galla {
+  position: relative;
+  height: 70px;
+  width: 120px;
+  margin: 5px;
+}
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption button {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  position: relative;
+}
+@media (max-width: 380px) {
+  #carouselExampleFade .carousel-inner .carousel-item .carousel-caption button a {
+    font-size: 11px;
+  }
+}
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption button a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 767px) {
+  #carouselExampleFade .carousel-inner .carousel-item .carousel-caption button a {
+    font-size: 13px;
+  }
+}
+@media (max-width: 575px) {
+  #carouselExampleFade .carousel-inner .carousel-item .carousel-caption button {
+    display: block;
+    width: 170px;
+    margin: 5px auto;
+  }
+}
+@media (max-width: 380px) {
+  #carouselExampleFade .carousel-inner .carousel-item .carousel-caption button a {
+    font-size: 11px;
+  }
+}
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption button.style {
+  background-color: #ffffff;
+}
+#carouselExampleFade .carousel-inner .carousel-item .carousel-caption button.style a {
+  color: #31313c;
+}
+#carouselExampleFade .carousel-inner .dark-overlay:after {
+  content: "";
+  background: #31313c;
+  background: -webkit-linear-gradient(to right, #31313c, #82a344);
+  background: linear-gradient(to right, #82a344, #31313c);
+  opacity: 0.8;
+}
+#carouselExampleFade button.arrow span {
+  border: 10px solid #ddd;
+  width: 45px;
+  height: 45px;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+#carouselExampleFade button.arrow span svg {
+  font-size: 26px;
+}
+#carouselExampleFade .carousel-control-prev span, #carouselExampleFade .carousel-control-next span {
+  position: absolute;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #82a344 !important;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+section.about {
+  background: url("https://image.ibb.co/mJ9tLa/image.png");
+  background-color: #212121;
+  background-blend-mode: overlay;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+section.about h1 {
+  color: whitesmoke;
+  font-family: "Exo 2", sans-serif;
+  font-size: 46px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+section.about p {
+  max-width: 700px;
+  min-height: 200px;
+  padding: 0;
+  color: whitesmoke;
+  font-family: OpenSans;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+}
+section.about .square {
+  height: 60px;
+  width: 60px;
+  border: 1px dashed white;
+  margin: 0 0 0 55px;
+  /*   padding: 1px; resize squares */
+  background-color: rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  transform: rotateZ(44deg);
+}
+section.about .square:hover {
+  background-color: rgba(27, 182, 239, 0.2);
+  transition: ease 0.2s;
+  cursor: pointer;
+}
+section.about .square .icons {
+  position: absolute;
+  transform: rotateZ(-44deg);
+  margin: 20px 0 0px 21px;
+}
+section.about .fa-facebook,
+section.about .fa-twitter,
+section.about .fa-dribbbler,
+section.about .fa-youtube,
+section.about .fa-dribbble {
+  width: 11px;
+  height: 22px;
+  color: white;
+  font-family: FontAwesome;
+  font-size: 23px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+section.about .square:hover .fa-facebook {
+  color: #3b5998;
+}
+section.about .square:hover .fa-twitter {
+  color: #1bb6ef;
+}
+section.about .square:hover .fa-dribbble {
+  color: #c73b6f;
+}
+section.about .square:hover .fa-youtube {
+  color: #e52d27;
+}
+section.about .logo {
+  margin: 1em;
+  position: fixed;
+  bottom: -72px;
+  z-index: 99999999999;
+  right: 0;
+}
+section.about .pen {
+  fill: black;
+  animation: rotateInDownLeft 3s forwards;
+}
+section.about .all {
+  animation: rotateOut 3s forwards;
+}
+@keyframes rotateInDownLeft {
+  from {
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 0, 0deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    transform: translateX(850px) translateY(-83px) rotate3d(0, 0, 1, -60deg);
+    opacity: 1;
+  }
+}
+@keyframes rotateOut {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    opacity: 1;
+  }
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, 90deg);
+    transform: rotate3d(0, 0, 1, 90deg);
+    opacity: 1;
+  }
+}
+
+#video-container {
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.touch #video-container {
+  background: url(http://xtianmiller.com/dist/videos/winter_creek.jpg) no-repeat center;
+  background-size: cover;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+}
+.touch video {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-left: 6%;
+  padding-right: 6%;
+  display: table;
+}
+.overlay__inner {
+  width: 100%;
+  height: auto;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.overlay h2 {
+  max-width: 40em;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.3;
+  margin: 0 auto;
+}
+.overlay p {
+  padding-top: 1em;
+  max-width: 40em;
+  margin: 0 auto;
+}
+.overlay a.btn {
+  display: inline-block;
+  margin-top: 25px;
+  border: 1px solid #00c1bb;
+  color: #00c1bb;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+}
+.overlay a.btn span {
+  display: inline-block;
+  padding: 6px 40px;
+  transition: transform 0.4s;
+}
+.overlay a.btn .row2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(100%);
+}
+.overlay a.btn:hover .row1 {
+  transform: translateY(-100%);
+}
+.overlay a.btn:hover .row2 {
+  transform: translateY(0);
+}
