@@ -2,10 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Halant:400,500,300,600,700|Josefin+Sans:400,100italic,100,300,300italic,400italic,600,600italic,700|Playfair+Display:400,400italic,700,700italic,900,900italic);
 /*start fixed variable's*/
  $font-title: 'Josefin Sans', sans-serif;
- $font-sans: 'Josefin Sans', sans-serif;
- $font-serif: 'Playfair Display', serif;
  $font-paragraph: 'Halant', serif;
- $font-drop-cap: 'Playfair Display', serif;
  // color && fonts
  $pry: #82a344;
  $sec: #31313c;
@@ -157,11 +154,7 @@
 }
 nav{
   background-color: rgba(238, 234, 234, 0.3);
-  transition:.4s ease-in-out ;
-  -webkit-transition:.4s ease-in-out ;
-  -moz-transition:.4s ease-in-out ;
-  -ms-transition:.4s ease-in-out ;
-  -o-transition:.4s ease-in-out ;
+ @include transition(.4s);
   position: absolute;
 }
 .navbar-brand {
@@ -183,9 +176,6 @@ nav{
   color: #4f4f4f;
 }
 
-// .navbar-scrolled {
-//   background-color: #fff;
-// }
 
 @media (max-width: 991px) {
   .scrollNow {
@@ -215,8 +205,7 @@ nav{
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
   background-color: #fff;
   position: fixed;
-  // color:#000 !important;
-  // opacity: 0;
+
 }
 .addColor{
   color:$sec !important;
