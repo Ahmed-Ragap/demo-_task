@@ -1,11 +1,35 @@
 
-'use strict';
-
-
-// toggle absolute && fixed navbar
-let homeNav = document.querySelector(".navbar");
+  //  start AOS Animation----------------
+  AOS.init();
+ 'use strict';
+// select scroll to top button
+const scrollToTop = document.querySelector(".scroll_to_top");
+//select navbar
+const homeNav = document.querySelector(".navbar");
+//select all nav links
+const navLink = document.querySelectorAll(".nav-link");
+ 
 window.onscroll = function(){
-  const scroll = window.scrollY > 100 ? homeNav.classList.add('scrollNow'):   homeNav.classList.remove('scrollNow')
+    if(window.scrollY > 100){
+      navLink.forEach(el => {
+        el.classList.add('addColor')
+      })
+      homeNav.classList.add('scrollNow')
+     
+    } else {
+      navLink.forEach(el => {
+        el.classList.remove('addColor')
+      })
+      homeNav.classList.remove('scrollNow')
+     
+    }
+  
+// add toggle style to scroll to top button
+if(window.scrollY > 400){ 
+  scrollToTop.style.opacity= '1'
+}else {
+  scrollToTop.style.opacity= '0'  
+}
+}
 
-} 
 
